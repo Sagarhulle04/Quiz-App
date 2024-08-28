@@ -1,15 +1,12 @@
-import 'package:advance_basics/next_page.dart';
 import 'package:flutter/material.dart';
 
 class Startscreen extends StatelessWidget {
-  const Startscreen({super.key});
+  const Startscreen(this.startQuiz, {super.key});
+
+  final Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
-    void Pressed() {
-      print("Pressed");
-    }
-
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +41,7 @@ class Startscreen extends StatelessWidget {
               foregroundColor: Colors.black,
             ),
             onPressed: () => {
-              const NextPage(),
+              startQuiz(),
             },
             label: const Padding(
               padding: EdgeInsets.all(10.0),
