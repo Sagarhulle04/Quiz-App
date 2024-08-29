@@ -1,5 +1,4 @@
 import 'package:advance_basics/models/quiz_question.dart';
-import 'package:flutter/material.dart';
 
 const questions = [
   QuizQuestion(
