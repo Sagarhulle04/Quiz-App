@@ -27,7 +27,7 @@ class Startscreen extends StatelessWidget {
           const Text(
             "Let's Learn flutter in fun way",
             style: TextStyle(
-              fontSize: 28,
+              fontSize: 22,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
@@ -44,12 +44,12 @@ class Startscreen extends StatelessWidget {
               startQuiz(),
             },
             label: const Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 "Start Quiz",
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 25,
+                  fontSize: 18,
                 ),
               ),
             ),

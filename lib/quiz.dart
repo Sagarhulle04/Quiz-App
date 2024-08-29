@@ -12,7 +12,6 @@ class QuizApp extends StatefulWidget {
 class _QuizAppState extends State<QuizApp> {
   var activeScreen = 'start-screen';
 
-  @override
   void switchScreen() {
     setState(() {
       activeScreen = 'question-screen';
