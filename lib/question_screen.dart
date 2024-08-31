@@ -10,44 +10,47 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  var currentQuestionIndex = 0;
+
+  void answerQuestion() {
+    setState(() {
+      currentQuestionIndex++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final currentQuestion = questions[0];
+    final currentQuestion = questions[currentQuestionIndex];
 
     return SizedBox(
       width: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Text(
+      child: Container(
+        margin: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
               currentQuestion.text,
               style: const TextStyle(
-                fontSize: 25,
+                fontSize: 30,
               ),
             ),
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          AnswerButton(
-            answer: currentQuestion.answers[0],
-            onTap: () {},
-          ),
-          AnswerButton(
-            answer: currentQuestion.answers[1],
-            onTap: () {},
-          ),
-          AnswerButton(
-            answer: currentQuestion.answers[2],
-            onTap: () {},
-          ),
-          AnswerButton(
-            answer: currentQuestion.answers[3],
-            onTap: () {},
-          )
-        ],
+            const SizedBox(
+              height: 30,
+            ),
+            ...currentQuestion.getShuffledAnswer().map(
+              (e) {
+                return AnswerButton(
+                  answer: e,
+                  onTap: () {
+                    answerQuestion();
+                  },
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
