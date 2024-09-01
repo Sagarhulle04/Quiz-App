@@ -3,7 +3,9 @@ import 'package:advance_basics/data/questions.dart';
 import 'package:flutter/material.dart';
 
 class QuestionScreen extends StatefulWidget {
-  const QuestionScreen({super.key});
+  const QuestionScreen({super.key, required this.onSelectAnswer});
+
+  final void Function(String answer) onSelectAnswer;
 
   @override
   State<QuestionScreen> createState() => _QuestionScreenState();
@@ -12,7 +14,8 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   var currentQuestionIndex = 0;
 
-  void answerQuestion() {
+  void answerQuestion(String selectAnswer) {
+    widget.onSelectAnswer(selectAnswer);
     setState(() {
       currentQuestionIndex++;
     });
@@ -44,7 +47,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 return AnswerButton(
                   answer: e,
                   onTap: () {
-                    answerQuestion();
+                    answerQuestion(e);
                   },
                 );
               },
