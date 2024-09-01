@@ -2,66 +2,75 @@ import 'package:advance_basics/models/quiz_question.dart';
 
 const questions = [
   QuizQuestion(
-    'What are the main building blocks of flutter ui',
+    ' "AS" clause is used in SQL for ',
     [
-      'Widget',
-      'Component',
-      'Blocks',
-      'Functions',
+      'Rename Operation',
+      'Selection Operation',
+      'Join Operation',
+      'Projection Operation',
     ],
   ),
   QuizQuestion(
-    'What are flutter ui built',
+    'The SQl DDL alllows specification of following',
     [
-      'By defining widget in config file',
-      'By combining widget in a visual editor',
-      'By combining widget in code',
-      'By using XCode for iOS and Android Studio for Android',
+      'The schema of each relation',
+      'The types of values associated with each attribuete',
+      'The integrity constraints',
+      'The security and authorization information for each relation',
     ],
   ),
   QuizQuestion(
-    'What are the main building blocks of flutter ui',
+    'An E-F diagram can graphically represents the',
     [
-      'Widget',
-      'Component',
-      'Blocks',
-      'Functions',
+      'Logical Structure',
+      'Physical Structure',
+      'View Structure',
+      'Virtual  Structure',
     ],
   ),
   QuizQuestion(
-    'What are the main building blocks of flutter ui',
+    'If you were collecting and storing information about your music collection, an album would be considered a(n)',
     [
-      'Widget',
-      'Component',
-      'Blocks',
-      'Functions',
+      'Entity',
+      'Relation',
+      'Instance',
+      'Attribute',
     ],
   ),
   QuizQuestion(
-    'What are the mian building blocks of flutter ui',
+    'Which of the following is Armstrong Axion',
     [
-      'Widget',
-      'Component',
-      'Blocks',
-      'Functions',
+      'Transitivity Rule',
+      'Reflexivity Rule',
+      'Psuedo Transitivity Rule',
+      'Augumentation Rule',
     ],
   ),
   QuizQuestion(
-    'What are the main building blocks of flutter ui',
+    'An entity set that does not sufficent  attributes to form a primary key is a ',
     [
-      'Widget',
-      'Component',
-      'Blocks',
-      'Functions',
+      'strong entity set',
+      'weak entity set',
+      'simple entity set',
+      'primary entity set',
     ],
   ),
   QuizQuestion(
-    'What are the main building blocks of flutter ui',
+    'Indexing based on a sorted order of vales are called',
     [
-      'Widget',
-      'Component',
-      'Blocks',
-      'Functions',
+      'Sequential Indices',
+      'Spares Indices',
+      'Hashing Indices Indices',
+      'Structurd  Indices',
     ],
   ),
+  QuizQuestion(
+    'Nonleaf nodes if B+ Tree structure form a ',
+    [
+      'Multilevel clustured indices',
+      'Spares indices',
+      'Multilevel dense indices',
+      'Multilevel spares indices'
+    ],
+  )
 ];
